@@ -1,0 +1,72 @@
+﻿<Window x:Class="Lab7DB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7DB.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000" MinHeight="350" MinWidth="1000">
+    <Window.DataContext>
+        <local:VMMainWindow/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Menu Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0">
+            <MenuItem Header="Создать" MinHeight="30" Command="{Binding CreateTable}"/>
+            <MenuItem Header="Открыть" MinHeight="30" Command="{Binding AddFiles}"/>
+            <MenuItem Header="Очистить" MinHeight="30" Command="{Binding Clear}"/>
+            <MenuItem Header="Обновить" MinHeight="30" Command="{Binding Update}"/>
+        </Menu>
+        <TreeView Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" ItemsSource="{Binding TreeElement}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <TextBlock Text="{Binding Name}"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding CollectionNameTables}" SelectedItem="{Binding SelectedNameTable}"/>
+        <DataGrid Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="1" ItemsSource="{Binding SelectedTable}" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"/>
+        <Menu Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" >
+            <MenuItem Header="Вывести таблицу" Command="{Binding OutputTable}"/>
+            <MenuItem Header="Редактировать таблицу" Command="{Binding RewriteTable}"/>
+            <MenuItem Header="Редактировать данные" Command="{Binding RewriteData}"/>
+        </Menu>
+        <GroupBox Grid.Row="4" Grid.Column="0" Header="Окно ошибок">
+            <Label Content="{Binding ContentErrorWindow}"/>
+        </GroupBox>
+        <Grid Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Text="Просмотр внешних ключей"/>
+            <ComboBox Grid.Column="0" Grid.Row="2" ItemsSource="{Binding NameColumnWithForeignKey}" SelectedItem="{Binding SelectedNameColumnWithForeignKey}"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="Выбрать" Command="{Binding OutPutForeignTable}"/>
+            <DataGrid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" ItemsSource="{Binding TableForeing}"/>
+            <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Text="Строки"/>
+            <ComboBox Grid.Column="0" Grid.Row="5" ItemsSource="{Binding CellsForeingColumn}" SelectedItem="{Binding SelectedCellsForeing}"/>
+            <Button Grid.Column="1" Grid.Row="5" Content="Выбрать" Command="{Binding OutPutForeignLine}"/>
+        </Grid>
+    </Grid>
+</Window>
