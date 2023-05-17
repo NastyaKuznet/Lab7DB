@@ -68,7 +68,7 @@
                                 <CheckBox Grid.Column="2" IsChecked="{Binding IsForeignKey}"/>
                                 <ComboBox Grid.Column="3" ItemsSource="{Binding CollectionNameTables}" SelectedItem="{Binding SelectedNameTable}"/>
                                 <Button Grid.Column="4" Content="Выбрать" Command="{Binding SelectTable}"/>
-                                <ComboBox Grid.Column="5" ItemsSource="{Binding CollectionNameColumns}" SelectedItem="{Binding SelectedNameColumns}"/>
+                                <ComboBox Grid.Column="5" ItemsSource="{Binding CollectionNameColumns}" SelectedItem="{Binding SelectedNameColumn}"/>
                                 <ComboBox Grid.Column="7" ItemsSource="{Binding CollectionTypeColumn}" SelectedItem="{Binding SelectedType}"/>
                             </Grid>
                         </DataTemplate>

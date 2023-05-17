@@ -233,7 +233,7 @@ namespace Lab7DB.ViewModel
                         {
                             if (prop.Name.CompareTo(contentColumn.SelectedNameColumn) == 0)
                             {
-                                if (prop.ReferencingTables == null)
+                                if(prop.ReferencingTables == null)
                                     prop.ReferencingTables = new List<string>();
                                 prop.ReferencingTables.Add(NameTable);
                             }

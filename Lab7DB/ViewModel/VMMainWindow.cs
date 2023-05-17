@@ -350,8 +350,11 @@ namespace Lab7DB.ViewModel
                 Dictionary<string, string> dict = new Dictionary<string, string>();
                 foreach (PatternPropertyDB column in element.FullPattern.Pattern.Properties.Values)
                 {
-                    collect.Add(column.Name);
-                    dict[column.Name] = column.Type;
+                    if (column.IsPrimaryKey)
+                    {
+                        collect.Add(column.Name);
+                        dict[column.Name] = column.Type;
+                    }
                 }
                 dictionary[element.FullPattern.Pattern.Name] = collect;
                 dictionaryWithType[element.FullPattern.Pattern.Name] = dict;

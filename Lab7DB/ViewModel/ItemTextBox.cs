@@ -59,7 +59,7 @@ namespace Lab7DB.ViewModel
                 OnPropertyChanged(nameof(IsPrimaryKey));
                 CollectionNameTables = new ObservableCollection<string>();
                 CollectionNameColumns = new ObservableCollection<string>();
-                IsForeignKey = false;
+                isForeignKey = false;
             }
         }
         public bool IsForeignKey
