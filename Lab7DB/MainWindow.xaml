@@ -28,6 +28,7 @@
             <MenuItem Header="Открыть" MinHeight="30" Command="{Binding AddFiles}"/>
             <MenuItem Header="Очистить" MinHeight="30" Command="{Binding Clear}"/>
             <MenuItem Header="Обновить" MinHeight="30" Command="{Binding Update}"/>
+            <MenuItem Header="Создать запрос" MinHeight="30" Command="{Binding RequestWindow}"/>
         </Menu>
         <TreeView Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" ItemsSource="{Binding TreeElement}">
             <TreeView.ItemTemplate>

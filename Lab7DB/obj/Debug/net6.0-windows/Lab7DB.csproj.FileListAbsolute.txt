@@ -32,3 +32,5 @@ C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RewriteTableWi
 C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RewriteTableWindow.baml
 C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RewriteDataWindow.g.cs
 C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RewriteDataWindow.baml
+C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RequestWindow.g.cs
+C:\Users\user\source\repos\Lab7DB\Lab7DB\obj\Debug\net6.0-windows\RequestWindow.baml

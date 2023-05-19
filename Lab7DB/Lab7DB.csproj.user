@@ -10,6 +10,9 @@
     <Compile Update="CreateWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RequestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="RewriteDataWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RequestWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RewriteDataWindow.xaml">

@@ -194,6 +194,21 @@ namespace Lab7DB.ViewModel
                 });
             }
         }
+        public ICommand RequestWindow
+        {
+            get 
+            {
+                return new CommandDelegate(parameter => 
+                {
+                    VMRequestWindow vmRequestWindow = new VMRequestWindow(ElementDBs);
+
+                    RequestWindow requestWindow = new RequestWindow();
+                    requestWindow.DataContext = vmRequestWindow;
+                    requestWindow.Show();
+                });
+            }
+        }
+
         public ICommand OutputTable
         {
             get
