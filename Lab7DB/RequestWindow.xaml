@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <DataGrid Grid.Column="0" Grid.Row="0" ItemsSource="{Binding TableOutPut}"/>
         <GroupBox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Header="Окно ошибок">
-            <TextBlock Text="{Binding Content}"/>
+            <TextBlock Text="{Binding Content}" TextWrapping="Wrap"/>
         </GroupBox>
         <TextBox Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Text="{Binding WindowInPut}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
         <Button Grid.Column="2" Grid.Row="2" Content="Выполнить" Command="{Binding Execute}"/>

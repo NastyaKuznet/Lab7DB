@@ -24,7 +24,7 @@
         <TextBlock Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Text="{Binding NameTable}"/>
         <DataGrid Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" ItemsSource="{Binding SelectedTable}"/>
         <GroupBox Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Header="Окно ошибок">
-            <Label Content="{Binding ContentErrorWindow}"/>
+            <TextBlock Text="{Binding ContentErrorWindow}" TextWrapping="Wrap"/>
         </GroupBox>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="Выберете строку по первому столбцу"/>
         <ComboBox Grid.Column="1" Grid.Row="3" ItemsSource="{Binding CollectDelete}" SelectedItem="{Binding SelectedDelete}"/>
